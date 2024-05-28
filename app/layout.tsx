@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
         openGraph: {
           images: [
             {
-              url: dynamicUrl(`./opengraph-image-${locale}.png`),
+              url: `opengraph-image-${locale}.png`,
               width: 1200,
               height: 630,
               alt: "Create Next App"
