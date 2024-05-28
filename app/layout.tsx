@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { dynamicUrl } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
         openGraph: {
           images: [
             {
-              url: `./opengraph-image-${locale}.png`,
+              url: dynamicUrl(`./opengraph-image-${locale}.png`),
               width: 1200,
               height: 630,
               alt: "Create Next App"
